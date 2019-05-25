@@ -10,6 +10,7 @@ const PageContainer = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
+  // overflow: hidden;
 `;
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <Route
         render={({ location }) => {
           return (
-            <PageContainer>
+            <PageContainer className="container">
               <TransitionGroup component={null}>
                 <CSSTransition
                   timeout={700}

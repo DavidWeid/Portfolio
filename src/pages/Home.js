@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavBtn } from "../components/NavBtns";
 
 const HomePage = props => {
   return (
     <div className="page-home">
-      Home Page
-      <Link to="/about">About</Link>
-      <Link to="/works">Works</Link>
-      <Link to="/contact">Contact</Link>
+      <p>Home Page</p>
+      <NavBtn destination="" text="Home" active />
+      <NavBtn destination="about" text="About" />
+      <NavBtn destination="works" text="Works" />
+      <NavBtn destination="contact" text="Contact" />
     </div>
   );
 };
