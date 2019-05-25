@@ -14,7 +14,7 @@ const PageContainer = styled.div`
 
 function App() {
   return (
-    <HashRouter basename="/">
+    <HashRouter basename="/portfolio">
       <Route
         render={({ location }) => {
           return (
