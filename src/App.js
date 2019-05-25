@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as HashRouter, Route, Switch } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 import "./App.scss";
@@ -14,7 +14,7 @@ const PageContainer = styled.div`
 
 function App() {
   return (
-    <Router>
+    <HashRouter basename="/">
       <Route
         render={({ location }) => {
           return (
@@ -37,7 +37,7 @@ function App() {
           );
         }}
       />
-    </Router>
+    </HashRouter>
   );
 }
 
