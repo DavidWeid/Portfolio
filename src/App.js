@@ -21,7 +21,7 @@ function App() {
             <PageContainer>
               <TransitionGroup component={null}>
                 <CSSTransition
-                  timeout={500}
+                  timeout={700}
                   classNames="page"
                   key={location.key}
                 >

@@ -1,14 +1,70 @@
-.App {
-  text-align: center;
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+$hundred: 100%;
+
+.page {
+  &-home,
+  &-about,
+  &-works,
+  &-contact {
+    width: $hundred;
+    height: $hundred;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  &-home {
+    background-color: black;
+    color: white;
+  }
+
+  &-about {
+    background-color: white;
+    color: black;
+  }
+
+  &-works {
+    background-color: red;
+    color: white;
+  }
+
+  &-contact {
+    background-color: blue;
+    color: white;
+  }
+
+  &-enter {
+    animation: slideInBot 700ms forwards;
+  }
+  &-exit {
+    animation: slideOutBot 700ms forwards;
+  }
+}
+
+@keyframes slideInBot {
+  from {
+    @include transform(translate3d(0, $hundred, 0));
+    visibility: visible;
+  }
+
+  to {
+    @include transform(translate3d(0, 0, 0));
+  }
+}
+
+@keyframes slideOutBot {
+  from {
+    @include transform(translate3d(0, 0, 0));
+  }
+
+  to {
+    visibility: hidden;
+    @include transform(translate3d(0, $hundred, 0));
+  }
 }
