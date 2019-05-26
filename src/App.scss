@@ -5,6 +5,11 @@
 }
 
 $hundred: 100%;
+$primaryColor: #16171c;
+$lightAccent: #787582;
+$lightShade: #f0eae7;
+$darkAccent: #4b7396;
+$darkShade: #141319;
 
 .page {
   &-home,
@@ -20,23 +25,23 @@ $hundred: 100%;
   }
 
   &-home {
-    background-color: black;
-    color: white;
+    background-color: $primaryColor;
+    color: $lightShade;
   }
 
   &-about {
-    background-color: white;
-    color: black;
+    background-color: $lightShade;
+    color: $primaryColor;
   }
 
   &-works {
-    background-color: red;
-    color: white;
+    background-color: $darkAccent;
+    color: $lightShade;
   }
 
   &-contact {
-    background-color: blue;
-    color: white;
+    background-color: $lightAccent;
+    color: $lightShade;
   }
 
   &-enter {

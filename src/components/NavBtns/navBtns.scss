@@ -1,0 +1,40 @@
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}
+
+$primaryColor: #16171c;
+$lightAccent: #787582;
+$lightShade: #f0eae7;
+$darkAccent: #4b7396;
+$darkShade: #141319;
+
+.btn {
+  &-container {
+    margin-top: 1%;
+    margin-bottom: 2%;
+    user-select: none;
+  }
+
+  &-link {
+    text-decoration: none;
+    border: none;
+    background-color: $darkShade;
+    color: $lightShade;
+    font-weight: 100;
+    padding: 1%;
+    text-transform: uppercase;
+    border-radius: 6px;
+    // display: inline-block;
+
+    &:hover {
+      color: $darkShade;
+      font-weight: 700;
+      letter-spacing: 3px;
+      background: $lightShade;
+      @include box-shadow(0px 5px 40px -10px rgba(0, 0, 0, 1));
+      transition: all 500ms ease;
+    }
+  }
+}

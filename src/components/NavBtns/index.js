@@ -4,13 +4,14 @@ import "./navBtns.scss";
 
 export function NavBtn(props) {
   return (
-    <button type="button">
+    <div type="button" className="btn-container" align="center">
       <Link
+        className="btn-link"
         to={`/${props.destination}`}
         onClick={props.active ? e => e.preventDefault() : null}
       >
         {props.text}
       </Link>
-    </button>
+    </div>
   );
 }
