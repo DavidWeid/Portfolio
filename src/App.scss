@@ -45,10 +45,10 @@ $darkShade: #141319;
   }
 
   &-enter {
-    animation: slideInBot 700ms forwards;
+    animation: slideInBot 700ms ease forwards;
   }
   &-exit {
-    animation: slideOutBot 700ms forwards;
+    animation: slideOutBot 700ms ease forwards;
   }
 }
 

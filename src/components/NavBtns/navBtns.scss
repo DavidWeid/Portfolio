@@ -37,4 +37,16 @@ $darkShade: #141319;
       transition: all 500ms ease;
     }
   }
+
+  &-disabled {
+    background-color: $lightShade;
+    color: $darkShade;
+
+    &:hover {
+      font-weight: 100;
+      letter-spacing: 0;
+      cursor: default;
+      @include box-shadow(0 0 0 0);
+    }
+  }
 }
