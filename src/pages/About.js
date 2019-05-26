@@ -1,14 +1,12 @@
 import React from "react";
-import { NavBtn } from "../components/NavBtns";
+import { NavBtn } from "../components/Btns";
 
 const AboutPage = props => {
   return (
     <div className="page-about">
-      <p>About Page</p>
-      <NavBtn destination="" text="Home" />
-      <NavBtn destination="about" text="About" active />
-      <NavBtn destination="works" text="Works" />
-      <NavBtn destination="contact" text="Contact" />
+      <NavBtn className="nav-home" destination="" text="Home" />
+      <NavBtn className="nav-works" destination="works" text="Works" />
+      <NavBtn className="nav-contact" destination="contact" text="Contact" />
     </div>
   );
 };

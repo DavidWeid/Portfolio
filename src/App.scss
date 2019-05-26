@@ -22,6 +22,9 @@ $darkShade: #141319;
     top: 0;
     left: 0;
     text-align: center;
+    display: grid;
+    grid-template-columns: [first] 2% [btn-start] 3% [btn-end] 2% auto [content-start] 20% [btn-start] 20% [btn-end] 20% [content-end] auto 2% [btn-start] 3% [btn-end] 2% [last];
+    grid-template-rows: [first] 3% [btn-start] 4% [btn-end] 1% auto [content-start] 10% [btn-start] 20% [btn-end] 10% [content-end] auto 1% [btn-start] 4% [btn-end] 3% [last];
   }
 
   &-home {
@@ -56,9 +59,11 @@ $darkShade: #141319;
   from {
     @include transform(translate3d(0, $hundred, 0));
     visibility: visible;
+    opacity: 0;
   }
 
   to {
+    opacity: 1;
     @include transform(translate3d(0, 0, 0));
   }
 }
@@ -66,9 +71,11 @@ $darkShade: #141319;
 @keyframes slideOutBot {
   from {
     @include transform(translate3d(0, 0, 0));
+    opacity: 1;
   }
 
   to {
+    opacity: 0;
     visibility: hidden;
     @include transform(translate3d(0, $hundred, 0));
   }

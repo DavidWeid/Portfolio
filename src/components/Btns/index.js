@@ -4,7 +4,13 @@ import "./navBtns.scss";
 
 export function NavBtn(props) {
   return (
-    <div type="button" className="btn-container" align="center">
+    // props.className = "nav-home", "nav-about", "nav-works", or "nav-contact"
+    // props.active will disable the button
+    <div
+      type="button"
+      className={`${props.className} nav-container`}
+      align="center"
+    >
       <Link
         className={props.active ? "btn-link btn-disabled" : "btn-link"}
         to={`/${props.destination}`}
