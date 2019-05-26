@@ -90,3 +90,27 @@ $darkShade: #141319;
     }
   }
 }
+
+@media all and (max-width: 1220px) {
+  .nav {
+    &-works {
+      position: relative;
+
+      .btn-link {
+        position: absolute;
+        left: -55px;
+        top: -20px;
+      }
+    }
+
+    &-contact {
+      position: relative;
+
+      .btn-link {
+        position: absolute;
+        left: -40px;
+        top: -20px;
+      }
+    }
+  }
+}
