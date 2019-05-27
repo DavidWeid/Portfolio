@@ -23,7 +23,7 @@ $darkShade: #141319;
     left: 0;
     text-align: center;
     display: grid;
-    grid-template-columns: [first] 2% [btn-start] 3% [btn-end] 2% auto [content-start] 15% [btn-start] 20% [btn-end] 15% [content-end] auto 2% [btn-start] 3% [btn-end] 2% [last];
+    grid-template-columns: [first] 2% [btn-start] 3% [btn-end] 2% auto [works-start] 15% [content-start] 15% [btn-start] 20% [btn-end] 15% [content-end] 15% [works-end] auto 2% [btn-start] 3% [btn-end] 2% [last];
     grid-template-rows: [first] 3% [btn-start] 4% [btn-end] 1% auto [content-start] 10% [btn-start] 20% [btn-end] 10% [content-end] auto 1% [btn-start] 4% [btn-end] 3% [last];
   }
 
@@ -31,8 +31,6 @@ $darkShade: #141319;
     color: $lightShade;
     background-color: $primaryColor;
     background: url("https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    // background-position: center;
-    // background-repeat: no-repeat;
     background-size: 100%;
     overflow: hidden;
     animation: panning 100s ease-in-out 1s infinite;
@@ -44,6 +42,7 @@ $darkShade: #141319;
   }
 
   &-works {
+    overflow: auto;
     background-color: $darkAccent;
     color: $lightShade;
   }

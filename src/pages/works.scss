@@ -1,0 +1,68 @@
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}
+
+$hundred: 100%;
+$primaryColor: #16171c;
+$lightAccent: #787582;
+$lightShade: #f0eae7;
+$darkAccent: #4b7396;
+$darkShade: #141319;
+
+.content {
+  &-works {
+    color: $lightShade;
+    background: rgb(10, 10, 10);
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: auto;
+    border-radius: 12px 12px 0 0;
+    grid-column: works-start / works-end;
+    @include box-shadow(0 5px 40px -10px rgba(0, 0, 0, 0.75));
+
+    @media all and (max-width: 1440px) {
+      grid-column: content-start / content-end;
+    }
+  }
+
+  &-worksbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+  }
+}
+
+.project {
+  &-card {
+    background: #787582;
+    width: 400px;
+    height: 400px;
+    margin: 2%;
+  }
+  &-featured {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+@media all and (max-width: 1290px) {
+    .project {
+        &-card {
+            width: 80%;
+        }
+
+        &-featured {
+            width: 100%;
+            height: 400px;
+        }
+    }
+}
+
+@media all and (max-width: 800px) {
+    .project-card {
+        width: 90%;
+    }
+}
