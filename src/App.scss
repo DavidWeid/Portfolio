@@ -23,13 +23,19 @@ $darkShade: #141319;
     left: 0;
     text-align: center;
     display: grid;
-    grid-template-columns: [first] 2% [btn-start] 3% [btn-end] 2% auto [content-start] 20% [btn-start] 20% [btn-end] 20% [content-end] auto 2% [btn-start] 3% [btn-end] 2% [last];
+    grid-template-columns: [first] 2% [btn-start] 3% [btn-end] 2% auto [content-start] 15% [btn-start] 20% [btn-end] 15% [content-end] auto 2% [btn-start] 3% [btn-end] 2% [last];
     grid-template-rows: [first] 3% [btn-start] 4% [btn-end] 1% auto [content-start] 10% [btn-start] 20% [btn-end] 10% [content-end] auto 1% [btn-start] 4% [btn-end] 3% [last];
   }
 
   &-home {
-    background-color: $primaryColor;
     color: $lightShade;
+    background-color: $primaryColor;
+    background: url("https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    animation: panning 100s ease-in-out 1s infinite;
   }
 
   &-about {
@@ -52,6 +58,24 @@ $darkShade: #141319;
   }
   &-exit {
     animation: slideOutBot 700ms ease forwards;
+  }
+}
+
+@keyframes panning {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  200% {
+    background-position: 0 0;
   }
 }
 
@@ -78,5 +102,41 @@ $darkShade: #141319;
     opacity: 0;
     visibility: hidden;
     @include transform(translate3d(0, $hundred, 0));
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .page {
+    &-home,
+    &-about,
+    &-works,
+    &-contact {
+      grid-template-columns: [first] 2% [btn-start] 3% [btn-end] 2% auto [content-start] 25% [btn-start] 20% [btn-end] 25% [content-end] auto 2% [btn-start] 3% [btn-end] 2% [last];
+      grid-template-rows: [first] 3% [btn-start] 4% [btn-end] 1% auto [content-start] 20% [btn-start] 20% [btn-end] 20% [content-end] auto 1% [btn-start] 4% [btn-end] 3% [last];
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .page {
+    &-home,
+    &-about,
+    &-works,
+    &-contact {
+      grid-template-columns: [first] 2% [btn-start] 3% [btn-end] 2% auto [content-start] 25% [btn-start] 20% [btn-end] 25% [content-end] auto 2% [btn-start] 3% [btn-end] 2% [last];
+      grid-template-rows: [first] 3% [btn-start] 4% [btn-end] 1% auto [content-start] 28% [btn-start] 20% [btn-end] 28% [content-end] auto 1% [btn-start] 4% [btn-end] 3% [last];
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .page {
+    &-home,
+    &-about,
+    &-works,
+    &-contact {
+      grid-template-columns: [first] 2% [btn-start] 3% [btn-end] 2% auto [content-start] 25% [btn-start] 20% [btn-end] 25% [content-end] auto 2% [btn-start] 3% [btn-end] 2% [last];
+      grid-template-rows: [first] 3% [btn-start] 4% [btn-end] 1% auto [content-start] 28% [btn-start] 20% [btn-end] 28% [content-end] auto 1% [btn-start] 4% [btn-end] 3% [last];
+    }
   }
 }

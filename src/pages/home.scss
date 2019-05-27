@@ -1,0 +1,64 @@
+@mixin grid-area($column, $row) {
+  grid-column: $column;
+  grid-row: $row;
+}
+
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}
+
+$hundred: 100%;
+$primaryColor: #16171c;
+$lightAccent: #787582;
+$lightShade: #f0eae7;
+$darkAccent: #4b7396;
+$darkShade: #141319;
+
+.content {
+  &-home {
+    color: $lightShade;
+    background: rgb(10, 10, 10);
+    padding: 8%;
+    border-radius: 12px;
+    border: 1px solid rgba(75, 115, 150, 0.1);
+    align-self: center;
+    @include grid-area(
+      (content-start / content-end),
+      (content-start / content-end)
+    );
+    @include box-shadow(0 5px 40px -10px rgba(0, 0, 0, 0.75));
+
+    @media all and (max-width: 600px) {
+      padding: 6% 2%;
+    }
+  }
+
+  &-title {
+    font-size: 250%;
+    margin-bottom: 2%;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+  }
+
+  &-body {
+    padding: 0 10%;
+    font-size: 155%;
+    line-height: 175%;
+
+    span {
+      color: rgb(43, 149, 241);
+      letter-spacing: 1px;
+      font-size: 110%;
+      font-weight: 500;
+    }
+
+    span#name {
+      @media all and (max-width: 700px) {
+        display: block;
+      }
+    }
+  }
+}

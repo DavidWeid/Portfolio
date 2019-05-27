@@ -19,10 +19,11 @@ $primaryColor: #16171c;
 $lightAccent: #787582;
 $lightShade: #f0eae7;
 $darkAccent: #4b7396;
-$darkShade: #141319;
+$darkShade: #0a0a0a;
 
 .btn {
   &-link {
+    font-size: 120%;
     text-decoration: none;
     border: none;
     background-color: $darkShade;
@@ -37,7 +38,7 @@ $darkShade: #141319;
       font-weight: 700;
       letter-spacing: 3px;
       background: $lightShade;
-      @include box-shadow(0px 5px 40px -10px rgba(0, 0, 0, 1));
+      @include box-shadow(0 5px 40px -10px rgba(0, 0, 0, 1));
       transition: all 500ms ease;
     }
   }
@@ -100,6 +101,11 @@ $darkShade: #141319;
         position: absolute;
         left: -55px;
         top: -20px;
+        background: unset;
+
+        &:hover {
+          background: $lightShade;
+        }
       }
     }
 
@@ -108,8 +114,13 @@ $darkShade: #141319;
 
       .btn-link {
         position: absolute;
-        left: -30px;
+        left: -40px;
         top: -20px;
+        background: unset;
+
+        &:hover {
+          background: $lightShade;
+        }
       }
     }
   }
