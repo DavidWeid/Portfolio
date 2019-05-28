@@ -10,13 +10,34 @@ const WorksPage = props => {
       <div className="content-works">
         {/* <div className="content-workstitle">Portfolio</div> */}
         <div className="content-worksbody">
-            <div className="project-card project-featured">Item 1</div>
-            <div className="project-card">Item 2</div>
-            <div className="project-card">Item 3</div>
-            <div className="project-card">Item 4</div>
-            <div className="project-card">Item 5</div>
-            <div className="project-card">Item 6</div>
-            <div className="project-card">Item 7</div>
+          <div className="project-card project-featured">
+            <img className="project-img" src="./images/mongo-scrapper-saved.png" alt="" />
+            <div className="project-text" />
+          </div>
+          <div className="project-card">
+            <img className="project-img" src="./images/" alt="" />
+            <div className="project-text" />
+          </div>
+          <div className="project-card">
+            <img className="project-img" src="./images/" alt="" />
+            <div className="project-text" />
+          </div>
+          <div className="project-card">
+            <img className="project-img" src="./images/" alt="" />
+            <div className="project-text" />
+          </div>
+          <div className="project-card">
+            <img className="project-img" src="./images/" alt="" />
+            <div className="project-text" />
+          </div>
+          <div className="project-card">
+            <img className="project-img" src="./images/" alt="" />
+            <div className="project-text" />
+          </div>
+          <div className="project-card">
+            <img className="project-img" src="./images/" alt="" />
+            <div className="project-text" />
+          </div>
         </div>
       </div>
     </div>
